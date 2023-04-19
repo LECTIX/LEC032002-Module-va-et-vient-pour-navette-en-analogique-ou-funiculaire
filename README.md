@@ -13,6 +13,8 @@ Fichiers sources pour le produit LEC032002
 
 Il n'est **pas nécessaire de savoir souder ou d'être bon en électronique** pour se procurer ce produit. Grâce aux fichiers sources publiés ici, vous pouvez être en mesure de faire fabriquer ce produit par un sous traitant.
 
+**ATTENTION** ce produit nécessite une programmation afin de pouvoir fonctionner. Vous devez pour cela posséder le programmateur et programmer vous même la carte. Cette étape peut nécessiter des connaissances techniques, si nécessaire, nous vous encourrageons à vous rapprocher d'un club.
+
 ### Faire fabriquer chez un sous traitant
 
 Il est aujourd'hui possible de faire fabriquer à moindre cout des cartes électroniques. Nous recommendons [JLCPCB](https://jlcpcb.com/) si vous voulez aller au moins cher. Si vous préférez un acteur européen, [eurocircuits](https://www.eurocircuits.com/) est un des acteurs reconnus.
@@ -41,6 +43,19 @@ Vous receverez vos cartes sous 1 à 3 semaines.
 ### Modifications des fichiers sources
 
 Installez kicad 6 (ou version supérieure), et ouvrez le fichier LEC032002.kicad_pro
+
+### Programation
+
+Pour programmer le module, vous devez posséder
+- un programmateur AVR type USBASP
+- une sonde Tag-Connect TC2050
+
+Le firmware se trouve dans le dossier du même nom. Il est recommandé d'utiliser VS-code et platform-io pour programmer la carte. Pour ce faire, branchez le programmateur à votre PC et à la carte à programmer, puis rentrer les commandes suivantes :
+
+```
+cd firmware
+platformio run --target fuses && platformio run --target upload
+```
 
 ### Regénérer les fichiers gerber, BOM, et position (Optionnel)
 

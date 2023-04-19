@@ -1,0 +1,42 @@
+#ifndef CONSTANTS_H
+#define CONSTANTS_H
+
+/**
+ * PB0  0       PCINT8  XTAL1
+ * PB1  1       PCINT9  XTAL2
+ * PB3  11      PCINT11 RESET
+ * PB2  2       PCINT10 OC0A    INT0
+ * PA7  3   A7  PCINT7  OC0B
+ * PA6  4   A6  PCINT6  MOSI    DI  SDA OC1A
+ * PA5  5   A5  PCINT5  MISO    DO  OC1B
+ * PA4  6   A4  PCINT4  SCK     SCL 
+ * PA3  7   A3  PCINT3
+ * PA2  8   A2  PCINT2  AIN1
+ * PA1  9   A1  PCINT1  AIN0
+ * PA0  10  A0  PCINT0  AREF
+ */ 
+
+
+#define PIN_DECEL A0
+#define PIN_ACCEL A1
+#define PIN_DELAY A2
+#define PIN_MAX_SPEED A3
+#define PIN_ILS1 6
+#define PIN_MOTOR_EN 5
+#define PIN_MOTOR_DIR 4
+#define PIN_MOTOR_CURRENT A7
+#define PIN_ILS2 0
+#define PIN_MOTOR_FAULT 1
+#define PIN_LED 2
+
+// Constants
+
+#define DEFAULT_ACCELERATION 5
+#define DEFAULT_DECELERATION 5
+#define DEFAULT_MAX_SPEED 255
+#define MIN_MAXIMUM_SPEED 50
+
+#define FORWARD_DIR 0
+#define BACKWARD_DIR 1
+
+#endif
