@@ -70,4 +70,6 @@ docker run --rm -w /kikit -v $PWD:/kikit yaqwsx/kikit kikit fab jlcpcb --assembl
 [Manuel FR](docs/manual_fr.pdf)
 
 ## License
-Tous nos fichiers sont plubliés sous la license CERN Open Hardware Licence Version 2 - Strongly Reciprocal
+Tous nos fichiers sont plubliés sous les licenses
+- CERN Open Hardware Licence Version 2 - Strongly Reciprocal pour ce qui touche au hardware
+- GNU General Public License v3.0 pour tout ce qui est software
